@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtCalculator"
+        android:gravity="center"
+        android:textColor="#3498db"
+        android:textSize="30sp"
+        android:textAllCaps="true"
+        android:text="Calculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/txtResult"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/txtCalculator"
+        android:textSize="24sp"
+        android:hint="Result"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txtResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <fragment
+            android:name="thinhtien.pntt.phannguyentruongthinh.fragmentexercise.SummationFragment"
+            android:id="@+id/fragmentSummation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+        <fragment
+            android:layout_centerInParent="true"
+            android:name="thinhtien.pntt.phannguyentruongthinh.fragmentexercise.SubtractionFragment"
+            android:id="@+id/fragmentSubtraction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <fragment
+            android:layout_alignParentRight="true"
+            android:name="thinhtien.pntt.phannguyentruongthinh.fragmentexercise.SubtractionFragment"
+            android:id="@+id/fragmentReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
